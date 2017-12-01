@@ -1,0 +1,43 @@
+
+    button,
+    div,
+    form, 
+    input {
+      margin: 2px;
+    }
+
+    img {
+    	
+    	
+    }
+
+    h1 {
+    	font-size: 40px;
+    	font-family: "Bitter", serif;
+    	font-weight: bold;
+    }
+
+    p {
+    	font-size: 25px;
+    	font-family: "Bitter", serif;
+    	font-weight: bold;
+
+    }
+	
+	body {
+		
+		background-color: #cccccc;
+
+  		
+	}
+
+	label {
+		font-weight: bold;
+	}
+
+	#buttons-view	{
+
+		font-size: 16px;
+    	font-family: "Bitter", serif;
+    	font-weight: bold;
+	}
