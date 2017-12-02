@@ -7,8 +7,13 @@
     }
 
     img {
+        border-radius: 118px;
     	
     	
+    }
+
+    .item{
+        width: 50%;
     }
 
     h1 {
@@ -26,7 +31,8 @@
 	
 	body {
 		
-		background-color: #cccccc;
+		
+        background: linear-gradient(to right, green , yellow)
 
   		
 	}
@@ -40,4 +46,16 @@
 		font-size: 16px;
     	font-family: "Bitter", serif;
     	font-weight: bold;
+
 	}
+
+    button {
+        background-color: #7BE85B;
+        border-width: 1px;
+        border-color: #7BE85B;
+        -webkit-appearance: button-bevel;
+       
+        
+            }
+
+    

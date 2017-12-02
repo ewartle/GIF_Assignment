@@ -17,7 +17,7 @@ $(document).ready(function(){
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
       sport + "&api_key=dc6zaTOxFJmzC&limit=10";
 
-        // Creating an AJAX call for the specific movie button being clicked
+        // Creating an AJAX call for the specific sport button being clicked
     $.ajax({
           url: queryURL,
           method: "GET"
@@ -34,10 +34,9 @@ $(document).ready(function(){
           sportPic.addClass("image");
           sportPic.attr("src", results[i].images.fixed_height_still.url);
           sportPic.attr("data-state", "still")
-          //sportPic.attr("data-still", results[i].images.fixed_height_still.url);
           sportPic.attr("data-animate", results[i].images.fixed_height.url);
           sportPic.attr("data-still", results[i].images.fixed_height_still.url);
-          sportPic.addClass("img-rounded");
+          
 
           var rating = results[i].rating;
           var p = $("<p>").text("Rating: " + rating);
@@ -76,7 +75,7 @@ $(document).ready(function(){
       // This function handles events where a sport button is clicked
   $("#add-sport").on("click", function(event) {
       event.preventDefault();
-      var sport = $("#sport-input").val().toUpperCase().trim(); //.upperCase();
+      var sport = $("#sport-input").val().toUpperCase().trim(); 
        
       sports.push(sport);
 
