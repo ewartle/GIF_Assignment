@@ -7,25 +7,6 @@ $(document).ready(function(){
               "BOXING", "MIXED MARTIAL ARTS", "KARATE", "GOLF", "CHEERLEADING", "TENNIS"]; 
 
   
-   var audioElement = document.createElement("audio");
-      audioElement.setAttribute("src", "bala.mp3");
-
-      function playMusic(){
-        audioElement.play();
-      }
-
-      function pauseMusic(){
-        audioElement.pause();
-      }
-
-  
-  // This function causes music to start / pause
-
-   $(document).on("click", "#theme-button", playMusic);
-
-   $(document).on("click", "#pause-button", pauseMusic);
-     
-
   // This function causes the HTML to display the appropriate Gifs
   
   function displaySportInfo() {
