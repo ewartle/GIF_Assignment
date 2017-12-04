@@ -7,9 +7,16 @@
     }
 
     img {
-        border-radius: 118px;
+        
+    	border-radius: 118px;
     	
-    	
+    }
+
+    #mainPic {
+        border-radius: 0px;
+        padding-left: 200px;
+       
+
     }
 
     .item{

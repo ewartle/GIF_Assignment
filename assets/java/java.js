@@ -4,9 +4,30 @@ $(document).ready(function(){
   var sports = ["SOCCER", "AMERICAN FOOTBALL", "SWIMMING", "DIVING", "TRACK", "HURDLES", "BASKETBALL", "CURLING", "GYMNASTICS", "DANCING", "SOFTBALL", "BASEBALL", 
               "VOLLEYBALL", "BEACH VOLLEYBALL", "SKIING", "POLE VAULTING", "ICE SKATING", "SPEED SKATING", "SNOW BOARDING", "SKEET SHOOTING", "PING PONG", 
               "BATON TWIRLING", "SPRINTING", "RUGBY", "CRICKET", "WEIGHT LIFTING", "BODY BUILDING", "CROSS COUNTRY SKIING", "CROSS COUNTRY RUNNING", "FENCING", 
-              "BOXING", "MIXED MARTIAL ARTS", "KARATE", "GOLF", "CHEERLEADING"]; 
+              "BOXING", "MIXED MARTIAL ARTS", "KARATE", "GOLF", "CHEERLEADING", "TENNIS"]; 
 
-  // This function causes the HTML to display the appropriate content
+  
+   var audioElement = document.createElement("audio");
+      audioElement.setAttribute("src", "bala.mp3");
+
+      function playMusic(){
+        audioElement.play();
+      }
+
+      function pauseMusic(){
+        audioElement.pause();
+      }
+
+  
+  // This function causes music to start / pause
+
+   $(document).on("click", "#theme-button", playMusic);
+
+   $(document).on("click", "#pause-button", pauseMusic);
+     
+
+  // This function causes the HTML to display the appropriate Gifs
+  
   function displaySportInfo() {
 
     $("#sports-view").empty();
@@ -25,6 +46,8 @@ $(document).ready(function(){
 
       var results = response.data;
       console.log (response);
+
+      //this forloop iterates over the results to the AJAX call, attributes data, adds a class and creates the image elements for the gifs. 
 
       for (var i = 0; i < results.length; i++) {
           
@@ -72,7 +95,7 @@ $(document).ready(function(){
       }
   }
 
-      // This function handles events where a sport button is clicked
+      // This function accepts user input when button submitted and runs the create button function to create new button.
   $("#add-sport").on("click", function(event) {
       event.preventDefault();
       var sport = $("#sport-input").val().toUpperCase().trim(); 
@@ -85,19 +108,8 @@ $(document).ready(function(){
 
  
 
-      //$("#clearButton").on("click", function(event) {
 
-    
-      //  event.preventDefault();
-    //    $(".form-control").html("hi");
-    //    console.log("clear");
-
-          
-
-   //   });
-
-
-   //this function controls what happens when the image is clicked
+   //this function controls what happens when the image is clicked.  Gif starts in static and then switches to animated when clicked.  Switches back to static when clicked again.
  $(document).on("click", ".image", function changeGIF(){
        
     var state = $(this).attr("data-state");
@@ -113,14 +125,13 @@ $(document).ready(function(){
 });
 
       
-      // Adding a click event listener to all elements with a class of "sport"
+      // Adding a click event listener to elements with class "sport"
   $(document).on("click", ".sport", displaySportInfo);
+
+
+
  
-
-      //Why does it run without the parenthesis after displaySportInfo?
-
-
-      // Calling the renderButtons function to display the intial buttons
+      // Calling the function that creates initial buttons
   createButtons();
  
 });
