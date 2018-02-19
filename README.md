@@ -1,10 +1,10 @@
-# GIF Assignment
+# Sports-GIFs
 
 In this program, you can enjoy your favorite sport GIFs!  
 
 ## Instructions:
 
-The application can be viewed at this website:  https://ewartle.github.io/GIF_Assignment/. 
+The application can be viewed at this website:  https://ewartle.github.io/Sports-GIFs/. 
 
 The application provides the user with multiple examples of sports and when the user clicks on the sports, related GIFs appear.  The user can click on the gif to animate and click again to still.  The user can also add a sport and view the gifs that correspond with that sport.      
 
